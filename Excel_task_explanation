@@ -1,0 +1,46 @@
+# Excel_task_edubridge
+STEP 1: Enter the values in excel.
+Customer name    Duplicate name
+ 
+Akshay Rathod
+Amit Kumar
+Amit Kumar
+Animesh verma
+Arti Ahuja
+Arti Ahuja
+Ashutosh Mahajan
+Eshank sharma
+Eshank sharma
+Harmeet kaur
+Kapil Khatri
+Kapil Khatri
+Mohit Jain
+Raj Sharma
+Sunil Yadav
+Swati singh
+
+We Want to populate the Duplicate name field for names that occurs more than once. The required table is shown below
+
+Customer name 	Duplicate name
+Akshay Rathod	Amit Kumar
+Amit Kumar	Arti Ahuja
+Amit Kumar	Eshank sharma
+Animesh verma	Kapil Khatri
+Arti Ahuja	
+Arti Ahuja	
+Ashutosh Mahajan	
+Eshank sharma	
+Eshank sharma	
+Harmeet kaur	
+Kapil Khatri	
+Kapil Khatri	
+Mohit Jain	
+Raj Sharma	
+Sunil Yadav	
+Swati singh	
+
+
+
+STEP 2: There is a Cell below the Duplicate Name column just do the Logic to populate the duplicate name field for names that occurs more than once.
+formula==IFERROR(INDEX([[Customer name ]],MATCH(0,COUNTIF(B1:$B$1,[[Customer name ]])+IF(COUNTIF([[Customer name ]],[[Customer name ]])>1,0,1),0)), "")
+
